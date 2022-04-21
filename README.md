@@ -34,8 +34,23 @@ Compile and deploy the contract then complete the following steps:
 
 - Review your tokens in MetaMask. To do so in MetaMask, click Add Token, click Custom Token, and then enter the address of the token contract. Make sure to buy larger amounts of tokens to get the denomination to appear in your wallet as more than a few wei worth.
 ---
+## Step by Step Instructions
+1. Clone the repo to your device 
+2. Take the code and create identical files on Remix 
+3. Compile both with compiler 0.5.5 
+4. Then open Ganache and import the first two wallet addresses into two seperate accounts on Metamask 
+5. In remix deploy environment choose injected web3 it will connect to the connected Metamask wallet 
+6. Then choose the contract KaseiCoinCrowdsaleDeployer and enter the coin name, symbol, the connected wallet address and the goal in wei e.g 10000000000000000000 wei which equals 10 ether. Press transact or deploy and confirm on Metamask. 
+7. Open deployed contract and press the first blue button that says kasei_crowdsale then copy that address it gives. 
+8. Change the contract to KaseiCoinCrowdsale and paste the address into At Address and click At Address this will deploy the new contract. 
+9. Then open the deployed contract KASEICOINCROWDSALE. 
+10. Go to Metamask and connect the second account from ganache that you imported. Copy the address from it and paste it in BuyTokens add a value under the amount you made the goal. 
+11. Then you can call the blue functions while you wait 5 minutes to make sure they match the amount you bought. 
+12. After 5 minutes press finalize and then confirm in Metamask. Then call the function Isopen it should say False. This means it was successful. 
+13. Now go to Metamask and connect the wallet you created the contract with and copy its address into the withdraw function. Press transact and confirm in Metamask. 
+14. The token is now available in your Metamask wallet and ready to be used :)  
+---
 ## Screenshots Of Completion
-- **As of now the code is correct but remix would not let me deploy so no screenshots of process, just compiles.**
 
 ### KaseiCoin.sol Compile 
 ![alt=""](Images/KaseiCoinCompile.png)
@@ -48,5 +63,8 @@ Compile and deploy the contract then complete the following steps:
 ![alt=""](Images/KaseiCoinCrowdsaleCompile2.png)
 ## 3 Final With Challenge Activity
 ![alt=""](Images/KaseiCoinCrowdsaleCompile3.png)
-
+## 4 KaseiCoin Crowdsale Deploy
+![alt=""](Images/KaseiCoinCrowdsaleDeploy1.png)
+## 5 Result with Ganache and Metamask of successful Transaction and Withdrawal 
+![alt=""](Images/FinalResult.png)
 ---
